@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorry Majhya Shonulyaaaa🥺💕</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --pink: #ff6b9d;
+      --light-pink: #ffc2d4;
+      --soft: #fff0f5;
+      --purple: #c77dff;
+      --yellow: #ffd166;
+      --dark: #4a2040;
+      --rose: #ff8fab;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--soft);
+      min-height: 100vh;
+      overflow-x: hidden;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ctext y='20' font-size='20'%3E🌸%3C/text%3E%3C/svg%3E"), auto;
+    }
+
+    /* ── Floating hearts ── */
+    .hearts-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .heart-float {
+      position: absolute;
+      animation: floatUp linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: .55;
+      }
+
+      90% {
+        opacity: .35;
+      }
+
+      100% {
+        transform: translateY(-120px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* ── Layout ── */
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 16px 80px;
+      min-height: 100vh;
+    }
+
+    .page {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 500px;
+      animation: fadeIn .55s ease;
+    }
+
+    .page.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ── Dots ── */
+    .dots {
+      display: flex;
+      gap: 9px;
+      margin: 8px 0 14px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--light-pink);
+      transition: all .3s;
+    }
+
+    .dot.active {
+      background: var(--pink);
+      transform: scale(1.45);
+    }
+
+    /* ── Bear ── */
+    .bear-wrap {
+      margin: 4px 0;
+      animation: bearBounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bearBounce {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-3deg);
+      }
+
+      50% {
+        transform: translateY(-12px) rotate(3deg);
+      }
+    }
+
+    .bear {
+      font-size: 6.5rem;
+      text-align: center;
+      line-height: 1;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: #fff;
+      border-radius: 28px;
+      padding: 26px 24px;
+      width: 100%;
+      box-shadow: 0 10px 40px rgba(255, 107, 157, .18), 0 2px 8px rgba(255, 107, 157, .08);
+      border: 3px solid var(--light-pink);
+      margin: 14px 0;
+      text-align: center;
+    }
+
+    .card-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.9rem;
+      color: var(--pink);
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 0 #ffe0ec;
+    }
+
+    .card-sub {
+      font-size: 1.05rem;
+      color: var(--dark);
+      line-height: 1.7;
+      font-weight: 600;
+    }
+
+    .sorry-msg {
+      font-size: .98rem;
+      color: #7a4060;
+      line-height: 1.85;
+      font-weight: 600;
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      padding: 13px 32px;
+      border-radius: 50px;
+      border: none;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all .2s;
+      margin: 6px;
+    }
+
+    .btn:active {
+      transform: scale(.95);
+    }
+
+    .btn-pink {
+      background: linear-gradient(135deg, var(--pink), #ff8fab);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(255, 107, 157, .38);
+    }
+
+    .btn-pink:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 10px 28px rgba(255, 107, 157, .5);
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: var(--pink);
+      border: 2.5px solid var(--light-pink);
+    }
+
+    .btn-outline:hover {
+      background: var(--soft);
+      transform: translateY(-2px);
+    }
+
+    .btn-no {
+      background: #eee;
+      color: #bbb;
+      font-size: .88rem;
+      padding: 10px 22px;
+      position: absolute;
+      transition: all .18s;
+    }
+
+    .buttons-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+      position: relative;
+      min-height: 56px;
+    }
+
+    /* ── Reasons ── */
+    .reasons {
+      list-style: none;
+      text-align: left;
+      width: 100%;
+    }
+
+    .reasons li {
+      padding: 10px 14px;
+      margin: 6px 0;
+      background: var(--soft);
+      border-radius: 16px;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--dark);
+      border-left: 4px solid var(--pink);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: slideIn .4s ease both;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .reasons li:nth-child(1) {
+      animation-delay: .1s
+    }
+
+    .reasons li:nth-child(2) {
+      animation-delay: .2s
+    }
+
+    .reasons li:nth-child(3) {
+      animation-delay: .3s
+    }
+
+    .reasons li:nth-child(4) {
+      animation-delay: .4s
+    }
+
+    .reasons li:nth-child(5) {
+      animation-delay: .5s
+    }
+
+    .reasons li:nth-child(6) {
+      animation-delay: .5s
+    }
+
+    /* ══════════════════════════════════════
+     MEMORIES PAGE
+  ══════════════════════════════════════ */
+    .memories-header {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.75rem;
+      color: var(--pink);
+      text-align: center;
+      margin-bottom: 6px;
+      text-shadow: 2px 2px 0 #ffe0ec;
+    }
+
+    .memories-sub {
+      text-align: center;
+      font-size: .9rem;
+      font-weight: 700;
+      color: #b07090;
+      margin-bottom: 16px;
+    }
+
+    /* Upload zone */
+    .upload-zone {
+      width: 100%;
+      border: 3px dashed var(--light-pink);
+      border-radius: 24px;
+      padding: 28px 20px;
+      text-align: center;
+      background: #fff9fb;
+      cursor: pointer;
+      transition: all .25s;
+      position: relative;
+    }
+
+    .upload-zone:hover,
+    .upload-zone.drag-over {
+      border-color: var(--pink);
+      background: #fff0f5;
+      transform: scale(1.01);
+    }
+
+    .upload-zone input[type=file] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .upload-icon {
+      font-size: 3rem;
+      margin-bottom: 8px;
+    }
+
+    .upload-text {
+      font-size: .95rem;
+      font-weight: 700;
+      color: #b07090;
+    }
+
+    .upload-hint {
+      font-size: .78rem;
+      color: #d0a0b5;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    /* Gallery grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 12px;
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    .memory-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      background: #fce0ec;
+      box-shadow: 0 4px 16px rgba(255, 107, 157, .2);
+      animation: popIn .4s ease both;
+      cursor: pointer;
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(.7) rotate(-4deg);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    .memory-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .3s;
+    }
+
+    .memory-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .memory-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Video badge */
+    .video-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: rgba(0, 0, 0, .55);
+      color: #fff;
+      font-size: .68rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Caption overlay */
+    .memory-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(255, 107, 157, .75));
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 800;
+      padding: 16px 8px 7px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity .25s;
+    }
+
+    .memory-item:hover .memory-caption {
+      opacity: 1;
+    }
+
+    /* Remove button */
+    .remove-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: rgba(255, 255, 255, .9);
+      border: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-size: .75rem;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+      font-weight: 900;
+      color: var(--pink);
+      transition: all .2s;
+    }
+
+    .memory-item:hover .remove-btn {
+      display: flex;
+    }
+
+    .remove-btn:hover {
+      transform: scale(1.2);
+      background: var(--pink);
+      color: #fff;
+    }
+
+    /* Caption input row */
+    .caption-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      align-items: center;
+    }
+
+    .caption-input {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 50px;
+      border: 2px solid var(--light-pink);
+      font-family: 'Nunito', sans-serif;
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--dark);
+      outline: none;
+      background: #fff9fb;
+      transition: border-color .2s;
+    }
+
+    .caption-input:focus {
+      border-color: var(--pink);
+    }
+
+    .caption-input::placeholder {
+      color: #d0a0b5;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(74, 32, 64, .92);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: lbFade .25s ease;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    @keyframes lbFade {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .lightbox-inner {
+      max-width: 90vw;
+      max-height: 85vh;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+    }
+
+    .lightbox-inner img,
+    .lightbox-inner video {
+      max-width: 90vw;
+      max-height: 80vh;
+      display: block;
+      border-radius: 20px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: rgba(255, 255, 255, .9);
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      font-weight: 900;
+      color: var(--pink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+      transition: transform .2s;
+    }
+
+    .lightbox-close:hover {
+      transform: scale(1.15);
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(255, 107, 157, .85));
+      color: #fff;
+      font-size: .95rem;
+      font-weight: 800;
+      padding: 24px 16px 14px;
+      text-align: center;
+    }
+
+    /* Nav arrows */
+    .lb-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, .85);
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      font-weight: 900;
+      color: var(--pink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+      transition: all .2s;
+      z-index: 1;
+    }
+
+    .lb-arrow:hover {
+      transform: translateY(-50%) scale(1.12);
+    }
+
+    .lb-prev {
+      left: -18px;
+    }
+
+    .lb-next {
+      right: -18px;
+    }
+
+    /* Empty state */
+    .empty-gallery {
+      text-align: center;
+      padding: 24px;
+      color: #d0a0b5;
+      font-weight: 700;
+      font-size: .9rem;
+      display: none;
+    }
+
+    /* ── Final page ── */
+    .hug-emoji {
+      font-size: 5.5rem;
+      animation: hugPulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes hugPulse {
+
+      0%,
+      100% {
+        transform: scale(1)
+      }
+
+      50% {
+        transform: scale(1.15)
+      }
+    }
+
+    .heart {
+      font-size: 4.5rem;
+      animation: shake 1s ease-in-out infinite;
+    }
+
+    @keyframes shake {
+
+      0%,
+      100% {
+        transform: rotate(-10deg)
+      }
+
+      50% {
+        transform: rotate(10deg)
+      }
+    }
+
+    /* ── Confetti ── */
+    .confetti-wrap {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9990;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      border-radius: 2px;
+      animation: confettiFall linear forwards;
+    }
+
+    @keyframes confettiFall {
+      0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    .tag {
+      font-size: .78rem;
+      color: #cca0b0;
+      margin-top: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    @media(max-width:400px) {
+      .card-title {
+        font-size: 1.55rem
+      }
+
+      .bear {
+        font-size: 5rem
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr))
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hearts-bg" id="heartsContainer"></div>
+
+  <div class="container">
+
+    <!-- ── PAGE 1: Opening ── -->
+    <div class="page active" id="page1">
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="bear-wrap">
+        <div class="bear">🐻</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Majha Rasgullaaaaa... 🥺</div>
+        <p class="card-sub">I know I messed up.<br>And I am really, truly, deeply...</p>
+        <br>
+        <p style="font-size:3rem;">Sorryyyyyy</p>
+      </div>
+      <button class="btn btn-pink" onclick="goTo(2)">Keep Reading... 💌</button>
+      <p class="tag">✨ made with love just for you ✨</p>
+    </div>
+
+    <!-- ── PAGE 2: Sorry ── -->
+    <div class="page" id="page2">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="bear-wrap">
+        <div class="bear">🙇</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Sorry Majhya Shonulyaaaa 🥺💕</div>
+        <p class="sorry-msg">
+          I hate that I hurt you.<br>You didn't deserve that at all.<br><br>
+          I know I didn’t value you before. Whenever you cried, I didn’t truly understand or appreciate your feelings.
+          Without even realizing it, I made you emotionally strong 🥺🥺<br><br>
+          But now I’ve realized my mistake. And now I’m the one who cries because of it 😭😭😭😭. I miss those old
+          days.<br><br>
+          I want the old emotional Rutu back 🥺🥺🥺🥺. I miss you so much.<br><br>
+          I want the Rutu who would cry for me, who would always long for me, who would constantly talk to me, who would
+          tell me everything no matter what happened, who would always come to me.<br>
+          I just want my Rutu back 😭😭😭😭🫂🫂🫂🫂<br>
+          You are the most important person in my world,
+          and I never want to make you feel bad. 💗<br><br>
+          I will do better. I really mean it 🥺🥺.<br>
+        </p>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
+        <button class="btn btn-outline" onclick="goTo(1)">← Back</button>
+        <button class="btn btn-pink" onclick="goTo(3)">See Why You're Amazing 💖</button>
+      </div>
+    </div>
+
+    <!-- ── PAGE 3: Reasons ── -->
+    <div class="page" id="page3">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="bear-wrap">
+        <div class="bear">🥰</div>
+      </div>
+      <div class="card">
+        <div class="card-title">I Love You Because... 💕</div>
+        <ul class="reasons">
+          <li>😊 Your smile literally makes my whole day</li>
+          <li>❤️ You are most Beautiful Girl in the world</li>
+          <li>💖 You are so cuteeeee than you think you are</li>
+          <li>🤗 Your hugs feel like home and everything</li>
+          <li>✨ You make everything more fun & beautiful</li>
+          <li>😁 You are my Chubby Girl</li>
+        </ul>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
+        <button class="btn btn-outline" onclick="goTo(2)">← Back</button>
+        <button class="btn btn-pink" onclick="goTo(4)">Our Memories 📸</button>
+      </div>
+    </div>
+
+    <!-- ── PAGE 4: MEMORIES ── -->
+    <div class="page" id="page4">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+      </div>
+
+      <div class="memories-header">Our Beautiful Memories 📸</div>
+      <p class="memories-sub">Add our favourite photos & videos together 💕</p>
+
+      <!-- Upload zone -->
+      <div class="upload-zone" id="uploadZone">
+        <input type="file" id="fileInput" accept="image/*,video/*" multiple onchange="handleFiles(this.files)">
+        <div class="upload-icon">📷</div>
+        <div class="upload-text">Tap to add Photos & Videos</div>
+        <div class="upload-hint">JPG, PNG, GIF, MP4, MOV supported</div>
+      </div>
+
+      <!-- Caption input -->
+      <div class="caption-row" style="width:100%">
+        <input type="text" class="caption-input" id="captionInput" placeholder="✏️ Type a caption for next upload...">
+      </div>
+
+      <!-- Gallery -->
+      <div class="gallery" id="gallery"></div>
+      <div class="empty-gallery" id="emptyMsg">No memories yet 🥺 Add some photos!</div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px">
+        <button class="btn btn-outline" onclick="goTo(3)">← Back</button>
+        <button class="btn btn-pink" onclick="goTo(5)">Will You Forgive Me? 🥺</button>
+      </div>
+    </div>
+
+    <!-- ── PAGE 5: Forgive? ── -->
+    <div class="page" id="page5">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot active"></div>
+      </div>
+      <div class="bear-wrap">
+        <div class="bear">🥺</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Majha Goluuuu Moluuuu 🥺</div>
+        <p class="card-sub">Will you forgive me?</p>
+        <br>
+        <p style="font-size:2.5rem;">💝</p><br>
+        <p class="sorry-msg">I will be better for you every single day 🥺</p>
+        <div class="buttons-row" id="btnRow">
+          <button class="btn btn-pink" onclick="accepted()">Yes, I Forgive You 💗</button>
+          <button class="btn btn-no" id="noBtn" onmouseover="runAway()" ontouchstart="runAway()">No 😤</button>
+        </div>
+      </div>
+      <button class="btn btn-outline" onclick="goTo(4)" style="margin-top:4px">← Back</button>
+    </div>
+
+    <!-- ── PAGE 6: Accepted ── -->
+    <div class="page" id="page6">
+      <div class="hug-emoji">🥳</div>
+      <div class="card" style="background:linear-gradient(135deg,#fff0f8,#fff5f0)">
+        <div class="card-title" style="font-size:2rem">Yay!! Thank You!!! 🎉</div>
+        <p class="sorry-msg">
+          You are the best girlfriend in the whole universe 🌎💫<br><br>
+          I will treat you like the queen and my little princess 👑<br><br>
+          I love you sooooo muchhhhh! 💖💖💖💖💖
+        </p>
+        <br>
+        <div class="heart">💖</div>
+      </div>
+      <!-- Mini memory replay -->
+      <div id="replayGallery" style="width:100%"></div>
+      <p class="tag">❤️ forever yours ❤️</p>
+    </div>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lb-arrow lb-prev" onclick="lbNav(-1)">‹</button>
+    <div class="lightbox-inner" id="lightboxInner">
+      <button class="lightbox-close" onclick="closeLightboxBtn()">✕</button>
+      <div id="lbMedia"></div>
+      <div class="lightbox-caption" id="lbCaption"></div>
+    </div>
+    <button class="lb-arrow lb-next" onclick="lbNav(1)">›</button>
+  </div>
+
+  <!-- Confetti -->
+  <div class="confetti-wrap" id="confettiWrap"></div>
+
+  <script>
+    // ─── Floating hearts ───
+    const emojis = ['💗', '💕', '💖', '🌸', '✨', '💝', '🌷', '💓', '🎀', '🩷'];
+    const bg = document.getElementById('heartsContainer');
+    for (let i = 0; i < 20; i++) {
+      const el = document.createElement('div');
+      el.className = 'heart-float';
+      el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      el.style.cssText = `left:${Math.random() * 100}vw;font-size:${1 + Math.random() * 1.4}rem;animation-duration:${7 + Math.random() * 10}s;animation-delay:${Math.random() * 12}s`;
+      bg.appendChild(el);
+    }
+
+    // ─── Render pre-loaded memories on start ───
+    window.addEventListener('DOMContentLoaded', () => renderGallery());
+
+    // ─── Drag & drop on upload zone ───
+    const zone = document.getElementById('uploadZone');
+    zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+    zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+    zone.addEventListener('drop', e => { e.preventDefault(); zone.classList.remove('drag-over'); handleFiles(e.dataTransfer.files); });
+
+    // ─── Memories store ───
+    let memories = [
+      { url: '1.jpg', type: 'image', caption: '💕 My favourite memory with you' },
+      { url: '2.jpg', type: 'image', caption: '🌸 Always smiling because of you' },
+      { url: '3.jpg', type: 'image', caption: '✨ You make life so beautiful' },
+      { url: '4.jpg', type: 'image', caption: '🌷 Every moment with you is special' },
+      { url: '5.jpg', type: 'image', caption: '💖 Us against the world' },
+      { url: '6.jpg', type: 'image', caption: '🥰 I love you more than words can say' },
+      { url: '7.jpg', type: 'image', caption: '🎀 Us in Pookie face' },
+      { url: '8.jpg', type: 'image', caption: '🥰 I love you sooooo muchhhhhhh' },
+    ];
+    let lbIndex = 0;
+
+    function handleFiles(files) {
+      const caption = document.getElementById('captionInput').value.trim();
+      Array.from(files).forEach(file => {
+        if (!file.type.startsWith('image/') && !file.type.startsWith('video/')) return;
+        const url = URL.createObjectURL(file);
+        const type = file.type.startsWith('video/') ? 'video' : 'image';
+        memories.push({ url, type, caption: caption || '' });
+      });
+      document.getElementById('captionInput').value = '';
+      renderGallery();
+    }
+
+    function renderGallery() {
+      const gallery = document.getElementById('gallery');
+      const empty = document.getElementById('emptyMsg');
+      gallery.innerHTML = '';
+      if (memories.length === 0) { empty.style.display = 'block'; return; }
+      empty.style.display = 'none';
+
+      memories.forEach((mem, idx) => {
+        const item = document.createElement('div');
+        item.className = 'memory-item';
+        item.style.animationDelay = (idx * 0.06) + 's';
+
+        if (mem.type === 'image') {
+          item.innerHTML = `
+        <img src="${mem.url}" alt="memory" loading="lazy" onclick="openLightbox(${idx})">
+        ${mem.caption ? `<div class="memory-caption">${mem.caption}</div>` : ''}
+        <button class="remove-btn" onclick="removeMemory(event,${idx})">✕</button>`;
+        } else {
+          item.innerHTML = `
+        <video src="${mem.url}" muted playsinline loop onclick="openLightbox(${idx})"
+          onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
+        <div class="video-badge">▶ Video</div>
+        ${mem.caption ? `<div class="memory-caption">${mem.caption}</div>` : ''}
+        <button class="remove-btn" onclick="removeMemory(event,${idx})">✕</button>`;
+        }
+        gallery.appendChild(item);
+      });
+    }
+
+    function removeMemory(e, idx) {
+      e.stopPropagation();
+      memories.splice(idx, 1);
+      renderGallery();
+    }
+
+    // ─── Lightbox ───
+    function openLightbox(idx) {
+      lbIndex = idx;
+      renderLightbox();
+      document.getElementById('lightbox').classList.add('open');
+    }
+    function renderLightbox() {
+      const mem = memories[lbIndex];
+      const media = document.getElementById('lbMedia');
+      // stop any previous video
+      media.querySelectorAll('video').forEach(v => v.pause());
+      if (mem.type === 'image') {
+        media.innerHTML = `<img src="${mem.url}" alt="memory">`;
+      } else {
+        media.innerHTML = `<video src="${mem.url}" controls autoplay loop playsinline></video>`;
+      }
+      document.getElementById('lbCaption').textContent = mem.caption || '';
+      // show/hide caption bar
+      document.getElementById('lbCaption').style.display = mem.caption ? 'block' : 'none';
+    }
+    function closeLightbox(e) { if (e.target === document.getElementById('lightbox')) closeLightboxBtn(); }
+    function closeLightboxBtn() {
+      document.getElementById('lbMedia').querySelectorAll('video').forEach(v => v.pause());
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    function lbNav(dir) {
+      lbIndex = (lbIndex + dir + memories.length) % memories.length;
+      renderLightbox();
+    }
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'ArrowLeft') lbNav(-1);
+      if (e.key === 'ArrowRight') lbNav(1);
+      if (e.key === 'Escape') closeLightboxBtn();
+    });
+
+    // ─── Page navigation ───
+    function goTo(n) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page' + n).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (n === 6) renderReplay();
+    }
+
+    // ─── Mini replay on final page ───
+    function renderReplay() {
+      const el = document.getElementById('replayGallery');
+      if (memories.length === 0) { el.innerHTML = ''; return; }
+      el.innerHTML = `
+    <div style="text-align:center;margin:14px 0 8px">
+      <span style="font-family:'Pacifico',cursive;color:var(--pink);font-size:1.2rem">Our Memories 💕</span>
+    </div>
+    <div class="gallery" style="max-width:480px;margin:0 auto">
+      ${memories.map((m, i) => m.type === 'image'
+        ? `<div class="memory-item" style="animation-delay:${i * .06}s" onclick="openLightbox(${i})"><img src="${m.url}" loading="lazy">${m.caption ? `<div class="memory-caption">${m.caption}</div>` : ''}</div>`
+        : `<div class="memory-item" style="animation-delay:${i * .06}s" onclick="openLightbox(${i})"><video src="${m.url}" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="video-badge">▶</div>${m.caption ? `<div class="memory-caption">${m.caption}</div>` : ''}</div>`
+      ).join('')}
+    </div>`;
+    }
+
+    // ─── No button runs away ───
+    let noCount = 0;
+    function runAway() {
+      noCount++;
+      const btn = document.getElementById('noBtn');
+      const row = document.getElementById('btnRow');
+      const maxX = Math.max(0, row.offsetWidth - btn.offsetWidth - 10);
+      btn.style.left = Math.random() * maxX + 'px';
+      btn.style.top = (Math.random() * 40 - 10) + 'px';
+      if (noCount > 3) { btn.style.fontSize = '.65rem'; btn.style.padding = '6px 12px'; }
+      if (noCount > 6) btn.style.display = 'none';
+    }
+
+    // ─── Confetti ───
+    function accepted() { launchConfetti(); setTimeout(() => goTo(6), 600); }
+    function launchConfetti() {
+      const colors = ['#ff6b9d', '#ffc2d4', '#c77dff', '#ffd166', '#06d6a0', '#ff8fab', '#fff', '#ffb3c6'];
+      const wrap = document.getElementById('confettiWrap');
+      for (let i = 0; i < 100; i++) {
+        const p = document.createElement('div');
+        p.className = 'confetti-piece';
+        const size = 8 + Math.random() * 8;
+        p.style.cssText = `left:${Math.random() * 100}vw;top:-20px;background:${colors[Math.floor(Math.random() * colors.length)]};width:${size}px;height:${size}px;border-radius:${Math.random() > .5 ? '50%' : '3px'};animation-duration:${1.5 + Math.random() * 2}s;animation-delay:${Math.random() * .6}s`;
+        wrap.appendChild(p);
+        setTimeout(() => p.remove(), 4500);
+      }
+    }
+  </script>
+</body>
+
+</html>
